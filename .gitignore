@@ -1,0 +1,10 @@
+# Entorno virtual (se recrea con requirements.txt)
+.venv/
+
+# Archivos autogenerados por Python y Pytest
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Configuración personal del editor
+.vscode/
