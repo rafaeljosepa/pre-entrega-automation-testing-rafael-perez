@@ -21,7 +21,7 @@ def test_titulo_inventario(driver_logueado):
 
 def test_productos_visibles(driver_logueado):
     """Hay productos visibles, el primero con nombre y precio"""
-    #1. Espera explicita
+    #1. Crear espera
     espera = WebDriverWait(driver_logueado, TIEMPO_ESPERA)
     productos = espera.until(EC.visibility_of_all_elements_located((By.CLASS_NAME, "inventory_item")))
 
