@@ -45,12 +45,12 @@ def test_elementos_interfaz(driver_logueado):
     """Elementos princiapales son visibles en la interfaz"""
     #1. El menu Hamburguesa esta visible
     menu = driver_logueado.find_element(By.ID, "react-burger-menu-btn")
-    assert menu.is_displayed(), "El menu hamburguesa esta visible"
+    assert menu.is_displayed(), "El menu hamburguesa NO esta visible"
 
     #2. Filtro ordenado de productos es visible
     filtro = driver_logueado.find_element(By.CLASS_NAME, "product_sort_container")
-    assert filtro.is_displayed(), "Los filtros estan visibles"
+    assert filtro.is_displayed(), "Los filtros NO estan visibles"
 
     #3. Icono del carrito esta visible
     carrito = driver_logueado.find_element(By.CLASS_NAME, "shopping_cart_link")
-    assert carrito.is_displayed(), "Icono del carrito es visible"
+    assert carrito.is_displayed(), "Icono del carrito NO esta visible"
