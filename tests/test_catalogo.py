@@ -2,12 +2,15 @@
 tests/test_catalogo.py
 Etapa 2: navegacion y verificacion del catalogo de productos.
 """
+import logging
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from utils.helpers import TIEMPO_ESPERA
 
+logger = logging.getLogger(__name__)
 
 def test_titulo_inventario(driver_logueado):
     """La pagina del inventario muestra el titulo correcto"""
@@ -34,7 +37,7 @@ def test_productos_visibles(driver_logueado):
     precio = primer_producto.find_element(By.CLASS_NAME, "inventory_item_price").text
 
     #4. Muestra de contenido de productos
-    print(f"Primer producto: {nombre} - Precio: {precio}")
+    logger.info(f"Primer producto: {nombre} - Precio: {precio}")
 
     #5. Validaciones
     assert nombre != "", f"Nombre Primer Producto Obtenido: {nombre}"

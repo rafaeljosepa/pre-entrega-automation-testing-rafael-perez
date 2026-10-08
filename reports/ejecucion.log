@@ -1,0 +1,14 @@
+2026-10-08 17:07:17 [INFO] utils.helpers: Iniciando sesión con el usuario: standard_user
+2026-10-08 17:07:18 [INFO] test_carrito: Producto agregado al carrito: Sauce Labs Backpack
+2026-10-08 17:07:18 [INFO] test_carrito: Navegación al carrito exitosa
+2026-10-08 17:07:18 [INFO] test_carrito: Agregado: Sauce Labs Backpack | En carrito: Sauce Labs Backpack
+2026-10-08 17:07:21 [INFO] utils.helpers: Iniciando sesión con el usuario: standard_user
+2026-10-08 17:07:24 [INFO] utils.helpers: Iniciando sesión con el usuario: standard_user
+2026-10-08 17:07:24 [INFO] test_catalogo: Primer producto: Sauce Labs Backpack - Precio: $29.99
+2026-10-08 17:07:27 [INFO] utils.helpers: Iniciando sesión con el usuario: standard_user
+2026-10-08 17:07:31 [INFO] utils.helpers: Iniciando sesión con el usuario: standard_user
+2026-10-08 17:07:31 [INFO] test_login: Login exitoso. URL actual: https://www.saucedemo.com/inventory.html
+2026-10-08 17:07:34 [INFO] utils.helpers: Iniciando sesión con el usuario: locked_out_user
+2026-10-08 17:07:35 [INFO] test_login: Mensaje de error mostrado: Epic sadface: Sorry, this user has been locked out.
+2026-10-08 17:07:37 [INFO] utils.helpers: Iniciando sesión con el usuario: standard_user
+2026-10-08 17:07:38 [INFO] test_login: Mensaje de error mostrado: Epic sadface: Username and password do not match any user in this service

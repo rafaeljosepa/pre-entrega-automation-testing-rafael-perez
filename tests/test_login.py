@@ -2,11 +2,15 @@
 tests/test_login.py
 Etapa 1: casos de prueba del login de saucedemo.com.
 """
+import logging
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from utils.helpers import login, cargar_usuario, TIEMPO_ESPERA
+
+logger = logging.getLogger(__name__)
 
 
 def test_login_exitoso(driver):
@@ -31,6 +35,7 @@ def test_login_exitoso(driver):
     encabezado = driver.find_element(By.CLASS_NAME, "title").text
     assert encabezado == "Products", f"Encabezado inesperado: {encabezado}"
 
+    logger.info(f"Login exitoso. URL actual: {driver.current_url}")
 
 def test_login_usuario_bloqueado(driver):
     """Usuario con credenciales bloqueadas no puede iniciar sesion"""
@@ -50,6 +55,8 @@ def test_login_usuario_bloqueado(driver):
     #5. Validar que la URL no contenga "/inventory.html" (resultado esperado, no deberia entrar el usuario)
     assert "/inventory.html" not in driver.current_url
 
+    logger.info(f"Mensaje de error mostrado: {mensaje_error}")
+
 
 def test_login_password_incorrecta(driver):
     """Usuario con credenciales incorrectas"""
@@ -67,4 +74,6 @@ def test_login_password_incorrecta(driver):
     assert "do not match" in mensaje_error, f"Mensaje inesperado: {mensaje_error}"
 
    #5. Validar que la URL no contenga "/inventory.html" (resultado esperado, no deberia entrar el usuario)
-    assert "/inventory.html" not in driver.current_url 
+    assert "/inventory.html" not in driver.current_url
+
+    logger.info(f"Mensaje de error mostrado: {mensaje_error}")
